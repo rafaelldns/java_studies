@@ -1,0 +1,52 @@
+Rafael do Nascimento Silva
+
+Questão 1: Explique, com suas palavras, qual a diferença entre uma Classe e um Objeto.
+Utilize uma analogia do mundo real (como a construção de uma casa ou a fabricação de um carro) para ilustrar sua resposta.
+A classe é um modelo que define a base dos atributos de um objeto e o objeto é algo criado a partir da definição dos
+atributos da classe;
+Uma classe pode ser utilizada como analogia definindo os atributos de por exemplo um bolo de forma generica,
+com cobertura, recheio etc.
+e ao objeto seria a definição do valor de cada atributo dessa forma, como por exemplo chocolate .
+
+2- Identifique e descreva a função dos dois componentes principais de uma classe:
+
+a) Atributos
+São dados de estado que estão armazenados no objeto
+
+b) Métodos
+É responsável pela ação do objeto
+
+3- O que é um método Construtor e qual é o seu principal objetivo no ciclo de vida de um objeto?
+O metodo construtor serve para gerar automaticamente instruções pré definidas assim que o objeto for criado,
+pois o metodo sera executado quando for criado. um exemplo real seria quando um carro sai de fabrica previamente
+pronto, com motor, cor... O metodo construtor existe para garantir que todo objeto inicie a sua "vida"
+corretamente configurado evitando erros e facilitando o uso
+
+4- Imagine que você tem uma classe base MeioDeTrans-porte com um método mover().
+As classes Aviao, Carro e Navio herdam dessa base.
+
+a) O que acontece quando chamamos o método mover() em uma lista que contém esses três tipos de objetos?
+Quando o metodo mover() for chamado ira ocorrer o polimorfismo e vai percorrer o sistema todo
+considerando todos os obejtos como meio de transporte,
+e executara o comando mover especificamente em cada objeto para sua respectiva classe, por exemplo mover(carro), moverá
+por terra, ou mover(aviao) movera por ar.
+
+b) Explique como o Polimorfismo permite que cada ob- jeto responda de forma diferente à mesma chamada.
+O polimorfismo permite que a mesma chamada de metodo apresente comportamentos diferentes a depender do objeto a
+ser executado, como no exemplo do metodo mover(), ao utiliza-lo quando se deparar para executar mover em um
+objeto do tipo avião, ira move-lo pelo ar, e quando o metodo mover se deparar com um objeto do tipo navio ira
+move-lo pelo mar, sendo assim polimorfismo
+
+5- Desenhe o diagrama de classes para um sistema de Livraria. O sistema deve conter:
+
+Uma classe base Produto (com nome e preço).
+
+Classes filhas Livro (com autor) e DVD (com duração).
+
+Um método aplicarDesconto() que funciona de forma diferente para Livros (10%) e DVDs (20%).
+
+feito no draw.io
+
+6- Fazer um simples programa em Java que faz a soma de dois números.
+
+Arquivo Ex6L1.java
