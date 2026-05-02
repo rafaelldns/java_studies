@@ -27,6 +27,16 @@ public class ex1 {
 
         list2.addAll(list1);
 
+        System.out.println("\nList 1:");
+        for (Integer num : list1) {
+            System.out.print(num + " ");
+        }
 
+        System.out.println("\n\nList 2:");
+        for (Integer num : list2) {
+            System.out.print(num + " ");
+        }
+
+        scanner.close();
     }
 }
