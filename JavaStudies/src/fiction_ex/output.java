@@ -22,7 +22,7 @@ public class output {
         System.out.printf("\nRecord: %d years old, code %d and gender: %c\n", age, code, gender);
 
         System.out.printf("\nMeasure with eight decimal places: %f", measure);
-        System.out.printf("\nRouded(three decimal places): %.3f\n", measure);
+        System.out.printf("\nRounded(three decimal places): %.3f\n", measure);
         Locale.setDefault(Locale.US);
         System.out.printf("With US decimal point: %.3f", measure);
 
