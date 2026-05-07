@@ -1,4 +1,4 @@
-package conditional_structure;
+package conditional_structure_exs;
 
 import java.util.Scanner;
 
