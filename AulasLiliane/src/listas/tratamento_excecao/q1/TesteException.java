@@ -1,4 +1,4 @@
-package listas.tratamento_exececao.q1;
+package listas.tratamento_excecao.q1;
 
 public class TesteException {
     public static void main(String[] args) {

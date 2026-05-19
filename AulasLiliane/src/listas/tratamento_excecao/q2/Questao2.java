@@ -1,4 +1,4 @@
-package listas.tratamento_exececao.q2;
+package listas.tratamento_excecao.q2;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

@@ -1,4 +1,4 @@
-package listas.tratamento_exececao.q3_4;
+package listas.tratamento_excecao.q3_4;
 
 public class Conta {
     private double saldo;
