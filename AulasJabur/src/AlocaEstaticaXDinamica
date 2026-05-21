@@ -1,5 +1,0 @@
-Alocação estatica x Alocação dinamica
-
-Alocação estatica - espaço de memoria para variaveis é reservado no inicio, nao podendo ser alterado
-
-Alocação dinamica - obtido o espaço a ser reservado na memoria em tempo de execução

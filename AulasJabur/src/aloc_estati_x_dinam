@@ -1,0 +1,125 @@
+Alocação estatica x Alocação dinamica
+
+
+                        |-- Static Memory Allocation
+    Memory Allocation --|
+                        |-- Dynamic Memory Allocation
+
+    -> Alocação estática
+        - O espaço de memória para as varíaveis é reservado no inicio da execução
+        - Não pode ser alterado depois.
+        - ex: int a; int b[20];
+
+    -> Alocação Dinâmica
+        - Um programa obtém espaço de memória em tempo de execução(runtime)
+        - Pode também liberar espaço não mais necessário
+        - Java realiza coleta de lixo automárica de objetos que não são mais utilizados
+
+    Porque não usar só Alocação Estática?
+        -> A maior vantagem da memória estática é ter uma área sequencia de memória
+            - Dado o endereço inicial da área alocada e o índice de um elemento da lista,
+            podemos acessá-lo imediatamente.
+            - Com um simples e rápido cálculo
+            - Mesmo tempo para acessar cada elemento
+
+        -> O grande problema, não poder redimensionar o uso de memória de uma estrutura
+
+            Ex prático:
+                -> 5 Nomes completos:
+                    - Ricardo Soares Romano Silva Amaral Jr., Luix Xia, Rubens Anacleto Soares,
+                    Rafael Carlos Cintra, Joana Rabelo Borges
+
+                -> Alocação Estática:
+                    - 5 pessoas X 50 caracteres por nome = 250 posições de memória
+                    - 2000 bits
+
+                -> Alocação Dinâmica:
+                    - 110 caracteres necessários = 880 bits
+
+        -> Ao se determinar o máximo de elementos que um vetor irá conter,
+        pode-se ocorrer um dos seguintes casos:
+
+            - Subdimensionamento:
+                Haverá mais elementos a serem armazenados que o vetor é capaz de conter
+
+            - Superdimensionamneto:
+                Na maior parte do tempo, somente uma pequena porcentagem do vetor
+                será realmente utilizada
+
+        -> Quando precisamos inserir ou apagar elementos no meio do vetor, o vetor deve ser rearranjado
+
+    Alocação Dinâmica de Memória
+
+        -> Em java toda a gerência de memória é realizada automaticamente
+            - O desenvolvedor não precisa se preocupar com a alocação
+            nem com a desalocação de memória
+
+        -> Java não sofre com os erros de memória causados pela manipulação de ponteiros
+
+        -- Em C++ se usa malloc alocando um bloco de bytes na memória RAM
+        devolvendo o endereço dos blocos
+
+        Em java:
+            - Após definir uma classe, criamos o objeto a partir dela.
+            - Os objetos quando criados são alocados na memória RAM do computador
+
+            Criação do objeto:
+
+                -> Quando um objeto é criado pela chamada: new <construtor>, isso acontece:
+
+                    - Um espaço de memória é alocado para o objeto criado e
+                    suas variáveis de instância são inicializadas com seus valores default
+                    - As inicializações explicitas programadas para as variaveis
+                    de instancia são realizadas
+                    - O construtor chamado é executado
+                    - O endereço de memória no qual o objeto está alocado é retornado
+                    e atribuido a variavel que referencia o objeto.
+
+        Liberando Memória
+
+            -- Em c
+                - free()
+                    - Se pode dizer especificamente qual espaço do objeto queremos liberar
+                    e exatamente o determinado instante
+
+            Java não possui free()
+                - Não é possível liberar memória manualmente em Java. Para isso existe o
+                Garbage Collection
+                    - O desenvolvedor não tem controle sobre ele mas podemos
+                    colocar o objeto com null, auxiliando a maquina virtual
+
+    Lista com alocação dinâmica
+
+        -> Vantagens:
+            - Permite inserir ou retirar itens no meio da lista a um custo constante
+                + Importante quando a lista deve ser mantida em ordem
+
+            - Bom em aplicações onde não existem previsões para o crescimento da lista.
+                + o tamanho máximo da lista não precisa ser definido a priori
+
+        -> Desvantagens:
+            - Utilização de memória extra para armazenar os ponteiros
+
+            =================================================
+            |   Alocação Estática   |   Alocação Dinâmica   |
+            =================================================
+            |Memória alocada previa |Memória alocada durante|
+            |mente à execução das   |a execução do programa |
+            |rotinas do programa    |                       |
+            |-----------------------------------------------|
+            |Não há nova alocação   |Alocações de memória   |
+            |ou desalocação de memó |são feitas e desfeitas |
+            |ria durante a execução |durante a execução     |
+            |-----------------------------------------------|
+            |Variaveis alocadas     |Alocadas somente quando|
+            |permanentemente        |a unidade do programa  |
+            |                       |estiver ativa          |
+            |-----------------------------------------------|
+            |Execução mais rápida   |Execução mais lenta    |
+            |-----------------------------------------------|
+            |Maior espaço de memória|Menor espaço de memória|
+            |é necessário           |necessário             |
+            =================================================
+
+
+
