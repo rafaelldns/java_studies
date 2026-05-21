@@ -1,0 +1,73 @@
+Arranjos(Arrays)
+
+    -> Estrutura de dados muito usada para representação de tabelas ou
+    sequência de valores
+
+        - Vetor: Arranjo unidimensional
+        - Matriz: Arranjo bidimensional
+
+    -> Arranjo é uma estrutura de dados:
+
+        - Homogênea: Componentes têm o mesmo tipo
+        - Tamanho fixo: Tem número limitado de componentes  em qualquer momento da execução
+        - "Eficiente": Armazenamento em posições contíguas permitem
+        tempo de acesso igual aos componentes
+        - Acesso via indexação: A cada componente corresponde um índice
+
+    -> Arranjo - Memória
+
+        - Arranjo espelha o funcionamento da memória de computador
+
+        - Memória pode ser vista como arranjo no qual índices são
+        endereços de posições da memória (chamadas de palavras)
+
+    -> Array in Java
+
+        Declaração     Criação
+            de            de
+        variável       objeto
+            |             |
+            |             |
+         int[] v     = new int[n]
+
+        _____________________________
+        | 0 | 0 | ... | 0 | ... | 0 |
+        -----------------------------
+          0   1         i        n-1
+
+        v[i] representa i-ésima variável de v (i = 0, ..., n-1)
+
+        Indexação:
+
+            v arranjo de tamanho n          |---- v[i] variável
+                                        ----|
+            i tem valor entre 0 e n-1       |---- (i-ésimo componente de v)
+
+            -i fora do intervalo 0 a n-1 => exceção
+                                             IndexOutOfBoundsException
+
+    -> Tipo Array
+
+        -Dado tipo T qualquer, T[] representa em Java tipo arranjo com componentes do tipo T.
+
+        -Exemplos:
+            + int[] tipo de arranjos de inteiros
+            + int[][] tipo de arranjos de arranjos de inteiros
+
+    -> Arranjos de diferentes tamanhos como elementos de arranjos
+
+        int[][] a;
+        a = new int[2][];
+        ...
+        a[0] = new int [10];
+        ...
+        a[1] = new int [40];
+        ...
+
+        - Exemplo: maior valor em arranjo de inteiros
+
+            int[] a;
+            ...
+            int maior = a[0];
+            for (int i = 1 ; i < a.length ; i++)
+                if (a[i] > maior) maior = a[i];
