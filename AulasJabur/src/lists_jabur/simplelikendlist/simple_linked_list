@@ -72,3 +72,27 @@ LISTA ENCADEADA SIMPLES
                     tail = atual   { atualiza a cauda da lista para ser esse nó que acabamos de encontrar }
                     atual.setNext(null)   { desconecta o antigo ultimo nó, garantido que a nova cauda aponte para o vazio }
                     size--
+
+            -> Remoção de um elemento no meio da lista
+
+               elemento 11:
+
+                first                                               last
+                    =====                                              =====
+                    | * |                                              | * |
+                    =====                                              =====
+                      |                                                  |
+                      ↓                                                  ↓
+                    ==========       =========       ===========       =========
+                    | 12 | * |  -->  | 7 | * |  -->  | 11 | \* |  -->  | 5 | \ |
+                    ==========       =========       ===========       =========
+                                             \                         /
+                                              \-----------------------/
+
+                Algoritmo remove(Node v)
+                    Node atual = head
+                    while (atual.getNext() != v)
+                        atual = atual.getNext()
+                    tail = atual
+                    atual.setNext(null)
+                    size--
