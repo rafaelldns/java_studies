@@ -1,0 +1,74 @@
+LISTA ENCADEADA SIMPLES
+
+    Implementação de uma lista encadeada simples
+
+        1) Criar nó
+            Node.java
+
+        2) A própria lista
+            SimpleLinkedList.java
+
+    Listas
+            -> Inserção no inicio da lista (head)
+
+                (head) first                          (tail) last
+                    =====        =========       ==========
+                    | * |  --->  | 7 | * |  -->  | 11 | \ |
+                    =====        =========       ==========
+                       ↘           ↙
+               novo Nó   ↘       ↙
+                         ==========
+                         | 12 | * |
+                         ==========
+
+                Algoritmo addFirst(v)
+                    v.setNext(head)   { faz v apomtar para o nó cabeça antigo }
+                    head <- v   { faz a variável head apontar para o nó novo }
+                    size <- +1   { incrementa o nó contador }
+
+            -> Inserção no final da lista (tail)
+
+
+                first                                   last(tail)
+                    =====                           =====
+                    | * |                           | * | ------↘
+                    =====                           =====         ↘
+                      |                               |             ↘
+                      ↓                               ↓               ↘ new Nó
+                    ==========      =========       ===========       =========
+                    | 12 | * |  --> | 7 | * |  -->  | 11 | \* |  -->  | 5 | \ |
+                    ==========      =========       ===========       =========
+
+                Algoritmo addLast(v)
+                    v.setNext(null)   { faz com que o novo nó, v, aponte para null}
+                    if (head == null) { verificando se a lista inicia vazia }
+                        head <- v   { nesse caso a variavel head quem apontara para o novo nó }
+                    else   { lista não vazia }
+                        tail.setNext(v)   { faz com que o nó cauda antigo aponte para o nó novo }
+                    tail <- v   { faz a variavel tail apontar para o novo nó}
+                    size <- size + 1
+
+            -> Inserção de um elemento no meio da lista
+
+                Algoritmo insertAfter(Node v, Node n)
+                    n.setNext(v.getNext())   { o novo nó aponta para o nó que vinha após o antigo nó "v"}
+                    v.setNext(n)   { assim o nó v passa a apontar para o nó n e conectar a lista }
+                    size++
+
+            -> Remoção do primeiro elemento (head)
+
+                    Algoritmo removeFirst()
+                        Node n = head   { guarda uma referencia para o nó atual da cabeça em "n"  }
+                        head = head.getNext()   { faz a cabeça da lista avançar para o proximo nó }
+                        n.setNext(null)   { isola o npo antigo "n" o removendo da lista }
+                        size--
+
+            -> Remoção do último elemento (tail)
+
+                Algoritmo removeFromBack()
+                    Node atual = head   { começa a buscar a partir do primeiro nó (head) da lista }
+                    while (atual.getNext() != tail)   { percorre a lista até encontrar o nó que está imediatamente antes do "tail" }
+                        atual = atual.getNext()
+                    tail = atual   { atualiza a cauda da lista para ser esse nó que acabamos de encontrar }
+                    atual.setNext(null)   { desconecta o antigo ultimo nó, garantido que a nova cauda aponte para o vazio }
+                    size--
