@@ -90,9 +90,10 @@ LISTA ENCADEADA SIMPLES
                                               \-----------------------/
 
                 Algoritmo remove(Node v)
-                    Node atual = head
-                    while (atual.getNext() != v)
+                    Node atual = head   { inicia a busca a partir do primeiro nó (head) da lista }
+                    while (atual.getNext() != v)   { percorre a litsa até encontrar o nó que está imediatamente antes de "v" }
                         atual = atual.getNext()
-                    tail = atual
-                    atual.setNext(null)
+                    atual.setNext(v.getNext()) { o nó atual pula o "v" e aponta para que o próximo  }
+                    if ( v == tail )   { se o "v" realmente for o último, ai sim atualizamos o tail }
+                        tail = atual
                     size--
