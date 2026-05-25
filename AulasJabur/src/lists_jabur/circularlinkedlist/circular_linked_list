@@ -1,0 +1,57 @@
+Conceito de Lista Circular
+
+    -> Possui o mesmo tipo de nó que uma lista com encadeamento simples
+        - Conteúdo do elemento
+        - Link para o próximo (next)
+
+    -> Mas também pode possuir um Link para o anterior(prev), no caso de ser duplamente encadeada
+
+    Diferenças para as listas vistas anteriormente
+        - Não possui primeiro e último
+        - O Link do último nodo ao inves de ser null, irá apontar para o primeiro nodo novamente
+
+                                       ¬cursor
+                                    =====
+                            ------> | 1 | -------
+                          /         =====         \
+                         /                         ↘
+                      =====                       =====
+                      | 6 |                       | 2 |
+                      =====                       =====
+                        ↑                           ↓
+                      =====                       =====
+                      | 5 |                       | 3 |
+                      =====                       =====
+                         ↖                         /
+                          \         =====         /
+                            ------- | 4 | <------
+                                    =====
+
+    -> Apesar de não ter inicio ou fim, é necessário ter referência para um nó "especial".
+        - O "cursor"
+        - Nó para atravessar a lista circular
+
+    -> Alguns metódos de atualização simples:
+        - add
+        - remove
+        - advance (avançar)
+
+    Lista Circular em Java
+
+        1) Criando lista circular
+            CircleList.java
+
+        2) Mainda CircleList
+            Main.java
+
+    -> Aplicações
+        - Em jogos:
+            ○ Jogo "Pato, Pato, Ganso"
+                - Representação de inteiros positivos grande:
+                Armazena-se os dígitos da direita pra esquerda numa lista circular (primeiro nó
+                contém o dígito menos significativo, último nó contém o dígito mais significativo)
+
+    -> A LinkedList do Java
+
+        - Implementa uma lista circular duplamente encadeada; cada elemento guarda a posição do
+        próximo e do anterior, formando um círculo
