@@ -1,0 +1,41 @@
+O problema
+    -> A lista simplesmente encadeada exige percorrer a lista para descobrir o elemento anterior
+    -> E para percorrer uma lista nas duas direções?
+        - Ligação para o "nó anterior" é necessária
+
+LISTA DUPLAMENTE ENCADEADA
+
+    -> Utilização de um ponteiro extra em cada nó, que indica o ponteiro anterior ao nó
+
+           ======  -->  ======
+       |---| x1 |       | x2 |---|
+       |   ======  <--  ======   |
+
+
+    -> Gasto de memória adicional
+        - Justificado pela facilidade de processamento de toda a lista
+
+    Implementação
+
+        1) Criar o objeto Nó
+            DNode.java
+
+        2) Criar a lista
+            -> Métodos
+            -> Impressão da lista gerada
+            DLinkedList.java
+
+        3) Main DLinkedList
+            Main.java
+
+        -> Os nós da lista são registros com dois ponteiros, para guarda o endereço do sucessor e antecessor
+
+               =====  -->  ======  -->  ======  -->       ======  -->  =====
+           |---|///|       | x1 |       | x2 |       ...  | xn |       |///|---|
+           |   =====  <--  ======  <--  ======  <--       ======  <--  =====   |
+               header      Antecessor               Sucessor           trailer
+                            (esquerda)               (direita)
+
+    Uma lista duplamente encadeada tem como caracteristica ser formada por elementos que:
+        contém, além de um ou mais campos chave, dois outros campos de ponteiros: próximo e anterior,
+        que oermitem acesso aos elementos adjacentes presente na mesma lista.

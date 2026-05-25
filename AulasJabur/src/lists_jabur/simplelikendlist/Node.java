@@ -4,14 +4,14 @@ package lists_jabur.simplelikendlist;
     //Cada nó guarda uma informação e aponta para o próximo nó
     public class Node{
 
-        //Atributo priva que aponta o dado deste nó (texto/String)
+        //Atributo privado que aponta o dado deste nó (texto/String)
         private String element;
 
         //Atributo privado que armazena a referencia (ponteiro) para o próximo nó da lista
         private Node next;
 
         // Construtor da classe Node é chamado quando criamos um novo nó,
-        //exigindo que passemo a próxima informação (s) e o próximo nó (n)
+        //exigindo que passemos a próxima informação (s) e o próximo nó (n)
         public Node(String s, Node n){
             //Atribui a String recebida "s" ao atributo "element" do nó
             element = s;
