@@ -1,0 +1,58 @@
+LISTS
+
+    Agrupam informações de um conjunto de elementos com ordem linear entre eles
+
+        conjunto de n > 0 nós os quais suas propriedades decorrem da posição relativa dos nós
+        dentro da sequencia linear
+            ex: informações sobre funcionários de uma empresa.
+
+    Operações básicas sobre listas:
+        -> Inserção
+        -> Remoção
+        -> Consulta sobre o valor de um elemento
+    Outras operações:
+        -> Alteração de um elemento
+        -> Combinações de listas em uma só
+        -> Ordenação de nós por atributo
+        -> Determinação do primeiro (ou do último) nó da lista
+
+    Duas alternativas de estrutura de dados:
+        - Alocação estática
+            - Por meio de arranjos
+        - Alocação dinâmica
+            - Por meio de estruturas encadeadas
+
+    ESTÁTICA:
+        - Tamanho fixo
+        - Custo operacional para operações de inserção e remoção
+         (Baixo desempenho)
+        - Deve se ter o tamanho máximo da lista ou uma estimativa
+
+        Útil quando for necessário otimizar o uso da memória
+
+    DINÂMICA:
+        - Estrutura encadeada cujo os nós são ligados entre si para indicar a ordem dos itens
+        - Aumenta e diminui em tempo de execução
+
+        Útil quando não é possível prever o número de entrada de dados em tempo de compilação
+
+    LISTAS ENCADEADAS
+
+        -> Nós com referencia para o próximo
+        -> Inserção e remoção de elemtos no meio de uma lista encadeada é uma operação prática.
+        -> Pode ter duas implementações
+            - Encadeamento simples
+            - Encadeamento duplo
+        -> Nós conectados por links
+        -> Acesso direto ao primeiro elemento é obrigatório
+        (Cabeça da lista - head)
+        -> Acesso direto ao último elemento é desejável
+        (Cauda da lista - tail)
+        -> Outros nós podem ser acessados a partir dos links
+
+        Passos para a criação de listas encadeadas
+            -> Alocação de um nó
+            (armazenado em uma posição aleatória da memória)
+            -> Colocação das informações no nó alocado
+            -> Inserção de mais um elemento na lista
+            (fazer o encadeamento)

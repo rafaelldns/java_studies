@@ -1,0 +1,72 @@
+Lista simplesmente encadeada
+
+Node head
+Node tail
+Node size
+
+inseriu novo:
+    size++
+removeu:
+    size --
+
+public class SimpleLinkedList
+    public SimpleLinkedList
+
+inserção no inicio da lista
+
+Algoritmo addFirst(v)
+v.setNext(head)
+head <- v
+size <- size + 1
+
+inserção no final da lista
+
+Algoritmo addLast(v)
+v.setNext(null)
+tail.setNext(v)
+tail <- v
+size <- size + 1
+
+if (size == 0){ head = tail = v }
+
+if( head == null) lista vazia
+head <- v
+
+inserção no meio da lista
+
+Algoritmo insertAfter(Node v, Node n)
+n.setNext(v.getNext())
+v.setNext(n)
+size++
+
+remove primeiro elemento
+Algoritmo removeFirst()
+    node n = head;
+    head = head.getNext();
+    n.setNext(null);
+    size--;
+
+remove ultimo elemento
+Algoritmo removeFromBack()
+    Node atual = head;
+    while (atual.Next)
+
+remove meio da lista
+Algoritmo remove (Node v)
+    Node atual = head;
+    while (atual.getNext() != v)
+        atual = atual.getNext();
+    tail = atual;
+    atual.setNext(null);
+    size <- size -1
+
+
+1 - Criar classe node, ela guarda int e o next que aponta para outro obj da classe Node
+2 - criar a classe start, que inicia o programa
+3 - criar a classe SimpleLinkedList, size, protected Node head, protected Node tail,
+3.1 - Criar metodo addFirst(v)
+3.2 - addAfter(Node v, Node n)
+3.3 - addLast(v)
+3.4 - remove( Node v)
+3.5 - removeFromBack()
+3.6 - removeFirst()

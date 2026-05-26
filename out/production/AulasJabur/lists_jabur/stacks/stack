@@ -1,0 +1,88 @@
+DEFINIÇÃO
+
+    -> Uma pilha(stack) é uma coleção de objetos que são inseridos e retirados
+    usando o principio:
+        O último a entrar é o primeiro a sair (LIFO)
+        LIFO = Last-in, First-out
+
+    -> Pilha deriva da metáfora de uma pilah de pratos.
+        - Retira o prato do topo (pop)
+        - Coloca o prato na pilha (push)
+
+            Exclusões       Inclusões
+                 \ Consultas /
+                  \         /
+                    ↘     ↙
+                     | ○ |
+                     | ○ |
+                     | ○ |
+                     | ○ |
+                     -----
+
+    Exemplo:
+        -> Beco sem saída
+            - São inseridos vários carros em um beco, para que consigam sair,
+            sempre o último deverá sair primeiro LIFO
+
+    -> A pilha é uma estrutura de dados fundamental
+
+        - Navegadores armazenam os endereços mais visitados em pilhas.Cada vez que um novo site é visitado
+        o seu endereço é armazenado na pilha de endereços. O navegador perimite voltar ao site previamente
+        visitado("pop") pelo botão "back"
+        - Pilhas de execução: controle da execução de subrotinas de um programa
+
+    Uso:
+        -> Editores de texto, onde oferecem um mecanismo de reverter.
+            - Cancela as operações recentes
+            - A operação é implementada mantendo as alteção no texto em uma pilha
+
+    TAD Pilha
+        -> Formalmente, uma pilha S é um TAD que suporta dois método que seguem:
+            - push(e): insere o objeto e no topo da pilha
+            - pop(): remove o elemento do topo e o retorna; erro em caso de pilha vazia
+
+        -> Adicionalmente, pode definir os métodos:
+            - size(): retorna o número de elementos na pilha
+            - isEmpty(): retorna um booleano indicando se a pilha está vazia
+            - Top(): retorna o elemento do topo, sem retirar; erro em caso de pilha vazia
+
+    Representação gráfica
+        -> Uma pilha de forma gráfica está representada no exemplo abaixo,
+        an é o elemento do topo.
+
+                         |  an  |
+                         | an-1 |
+                         |  ... |
+                         |  a2  |
+                         |  a1  |
+                         --------
+
+        -> Quando an sair , o topo passa a ser an-1, assim será o novo an
+
+    Interface para pilhas em Java
+
+        -> Implementar um TAD em Java envolve dois passos:
+            - Definição de uma Application Programming Interface (API), ou simplesmente interface
+            - Definir exceções para qualquer condição de erro que possa ocorrer
+
+        Definindo exceção
+            -> A condição de erro que ocorre quando se chama os métodos pop() ou top()
+            sobre uma pilha vazia é sinalizada pelo lançamento de uma exceção do tipo
+            EmptyStackException
+
+                public class EmptyStackException extends RuntimeException{
+                    public EmptyStackException(String err){
+                        super(err);
+                    }
+                }
+        Definindo Interface da Pilha
+            interfStack.java
+
+        Uma implementação baseada em Arrays
+            -> A pilha desta implementação necessita:
+                - Um array S de N elementos
+                - Uma variável t, que fornece o índice do elemento topo no arranjo S;
+                t = -1, pilha vazia;
+                - Uma nova exceção (epecifica aqui) chamada FullStackException, que sinalizará uma condição de erro
+                na tentativa de inserir um elemento em um arranjo cheio
+            ArrayStack.java

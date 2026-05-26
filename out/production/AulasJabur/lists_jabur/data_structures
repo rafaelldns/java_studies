@@ -1,0 +1,112 @@
+O que são estruturas de dados?
+
+    -> Uma maneira de organizar e realizar operações com dados
+
+    -> Escolher a estrutura de dados ideal é um problema dificil
+
+        - Envolve uma complexidade algoritmica
+        - O processamento muda totalmente dependendo da implementação
+        - Há muitos dados no mundo no real
+            + E de vários tipos
+
+    Definição:
+        - Estrutura de dados é o ramo da computação que estuda os
+        diversos mecanismos de organização de dados para atender aos
+        diferentes requisitos de processamento
+
+        - Armazenar informação de forma inteligente
+            + Favorecendo a recuperação eficiente
+
+    As estruturas de dados definem:
+        - A organização, métodos de acesso e opções de processamento
+        para a informação manipulada.
+
+    -> Sempre importante saber trabalhar bem a informação
+        -> Os dados crescem exponencialmente no mundo digital
+    Solução: Utilizar boas estruturas de dados
+
+    Projeto de Estrutura de Dados
+
+        -> Uma modelagem abstrata de dados a serem manipulados e
+        das operações sobre eles
+
+            - Tipo Abstrato de Dados (TAD)
+            ("Abstract Data Type ADT")
+            - Ex:
+                Uma "pilha" com operações
+                "empilhar" e "desempilhar"
+
+        -> Modelagem concreta do TAD.
+
+            - Como armazenar o TAD em memória e que algoritmos
+            devem ser usados para implementar a operação
+                -- Ex: Pilha encadeada como lista ou vetor
+
+    Exemplo de uma Estrutura de dados
+
+        Agenda de celular
+
+            -> Tarefas
+                1) Definir como as informações dos contatos serão armazenadas
+                2) Disponibilizar operações para criar, recuperar, ordenar, atualizar e remover
+                E também status da Agenda
+                    + Quantidade de contatos existentes
+                    + Quantidade de espaço para novos contatos
+
+                - Primeira tarefa crucial para o desempenho:
+                    + Se a agenda armazenar as informações de forma desorganizada
+                    será mais dificil de manipular os dados
+                - Escolher como serão armazenadas as informações, antes deve ser
+                levado em consideração as operações a serem realizadas
+                    + Como colocar contatos em ordem alfabética para facilitar a busca
+                -- Operações essas que são as necessárias a serem vistas pelo usuário
+                    - Tais:
+                        + Inserir
+                        + Recuperar
+                        + Atualizar
+                        + Remover contato
+                        + Saber quantos contatos estão na agenda
+                        + ...
+                    E esse conjunto de operações é a interface do usuário com a agenda
+                    -> Mantida a interface, se pode trocar uma agenda que não é tão eficiente
+                    ou que já não atenda as requisições necessárias por uma mais atualizada
+                    com mais operções ou melhor eficiência
+                        + Para não sofrer com a nova agenda:
+                            ++ Modificamos a implementção
+                            ++ Mas não mudamos a interface
+
+    Dados e Estrutura de Dados
+
+        -> É importante não fazer a mistura de "Dados" e "Estrutura de Dados"
+        em uma coisa só
+            - Dado é uma informação armazenada e Estrutura de Dados é quem
+            administra os dados
+        - O ideal é que a estrutura de dados seja o mais independente possível
+        dos dados que ela irá armazenar
+
+        -> Modos básico de organização
+
+            - Armazenamento sequencial estático
+                + Reserva de espaço em memória
+            - Armazenamento dinâmico
+                + Ligações entre os elementos
+
+        Exemplo:
+
+            =========================
+            | 2 | 8 | 4 | 3 | 6 | 1 |    - - > Dados desorganizados
+            =========================
+
+            =========================
+            | 1 | 2 | 3 | 4 | 6 | 8 |    - - > Dados organizados
+            =========================
+                + Retire o 4
+
+            =========================
+            | 1 | 2 | 3 |   | 6 | 8 |    - - > Dados desorganizados
+            =========================
+                + Devemos retirar o espaço vazio, realocando os seguintes
+
+            =====================
+            | 1 | 2 | 3 | 6 | 8 |    - - > Dados desorganizados
+            =====================
