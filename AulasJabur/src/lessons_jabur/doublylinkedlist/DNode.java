@@ -1,4 +1,4 @@
-package lists_jabur.doublylinkedlist;
+package lessons_jabur.doublylinkedlist;
 
 public class DNode {
 

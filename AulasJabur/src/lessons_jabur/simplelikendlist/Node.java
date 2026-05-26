@@ -1,4 +1,4 @@
-package lists_jabur.simplelikendlist;
+package lessons_jabur.simplelikendlist;
 
     //Declara uma classe interna que representa um "Nó" da lista
     //Cada nó guarda uma informação e aponta para o próximo nó

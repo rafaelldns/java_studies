@@ -1,4 +1,4 @@
-package lists_jabur.circularlinkedlist;
+package lessons_jabur.circularlinkedlist;
 
 public class Main {
     static void main(String[] args) {

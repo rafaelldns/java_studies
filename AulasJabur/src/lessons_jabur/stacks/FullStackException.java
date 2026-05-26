@@ -1,4 +1,4 @@
-package lists_jabur.stacks;
+package lessons_jabur.stacks;
 
 public class FullStackException extends RuntimeException {
     public FullStackException(String err) {

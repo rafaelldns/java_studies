@@ -1,4 +1,4 @@
-package lists_jabur.simplelikendlist;
+package lessons_jabur.simplelikendlist;
 
 public class SimpleLinkedList {
 

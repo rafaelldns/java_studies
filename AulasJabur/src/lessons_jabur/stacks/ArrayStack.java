@@ -1,4 +1,4 @@
-package lists_jabur.stacks;
+package lessons_jabur.stacks;
 
 import java.util.EmptyStackException;
 
