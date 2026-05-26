@@ -1,0 +1,44 @@
+FILA
+
+    -> É uma coleção de objetos que são inseridos e removidos como "Ordem de chegada"
+        - O primeiro que entra é o primeiro que sai
+        - First in, First out (FIFO)
+
+    -> Os elementos podem ser inseridos a qualquer momento, mas somente o elemento que
+    está na fila há mais tempo pode ser retirado sequencialmente
+
+    -> TAD Fila
+        - Define uma coleção que mantém objetos em sequencia, onde o acesso e qualquer
+        operação nos elementos são restritas ao primeiro elemento.
+        - Primeiro elemento = Inicio da fila
+        - Inserção de elementos é restrita ao fim da sequencia/ fim da fila
+        - Assim os elementos de uma fila entram por trás e saem pela frente
+
+        - TAD fila suporta os dois métodos fundamentais que seguem:
+            enqueue(e): Insere elemento 'e' no fim da fila
+            dequeue(): Retira e retorna o objeto da frente da fila; Erro em fila vazia.
+            -> Outros métodos:
+                size(): Num de objetos na fila
+                isEmpty(): Retorna um booleando indicando se fila está vazia, true ou false
+                front(): Retorna sem remover, o objeto da frente da fila; Erro em fila vazia
+
+        equeue->10   equeue->5   dequeue    enqueue->15   enqueue->7    dequeue
+           ↓            ↓           ↑          ↓             ↓             ↑
+         |   |       |    |      |    |      |   |        |    |        |    |      |    |
+         |   |       |    |      |    |      |   |        |    |        |  7 |      |  7 |
+         |   |  ->   |    |  ->  |    |  ->  |   |   ->   | 15 |   ->   | 15 |  ->  | 15 |
+         |   |       |    |      |  5 |      | 5 |        |  5 |        |  5 |      |    |
+         |   |       | 10 |      | 10 |      |   |        |    |        |    |      |    |
+         =====       =====       ======      =====        ======        ======      ======
+
+    -> Aplicações de Filas
+        - As filas são frequentemente usadas em simulações, uma vez que existe uma teoria das filas
+        bem desenvolvida e matematicamente sofisticada, onde diversos cenários são analisados e
+        modelos que usam filas são construídos
+
+        EX:
+            Clientes em fila de espera, peças em filas de montagem, conteiners em portos,
+            sistema de trânsito de grandes cidades...
+
+    Interface fila em Java
+        interfQueue.java
