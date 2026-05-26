@@ -1,0 +1,51 @@
+TIPO ABSTRATO DE DADOS (TAD)
+ABSTRACT DATA TYPE (ADT)
+
+    -> Desenvolvedor pode definir novos tipos
+    -> É uma estrutura caracterizada pela operação que se aplica sobre ele
+
+    O TAD encapsula a estrutura de dados
+        -> Os usuários tem acesso às operações disponibilizadas sobre os dados
+        -> TAD: Usuário x Programador
+            - Usuário só "enxerga"  interface, não a implementação
+
+    Vantagens:
+
+        - Integridade
+        - Manutenção
+            • Podemos modificar a implementação interna do TAD sem modificar o código que usa o TAD
+        - Reutilização
+
+    Exemplo:
+
+        - Aluno, Carro
+        - Lista, Árvore, Pilha, Fila
+
+    Implementação de TADs
+        - Em liguagens estruturadas(C, pascal) = tipos/funções
+        - Em linguagens orientadas a objetos (C++, Java) = classes
+
+    Structs em C
+        -> Uma estrutura é uma coleção de uma ou mais variáveis dispostas em um único identificador
+        Exemplo:
+            Ao representar um cliente, são necessários: código, nome, CPF
+                - No lugar de 3 variáveis, cria-se uma única que contenha os três campos
+                - Em c, se usa a construção struct para representar esse tipo de dado
+                    EX:
+                        struct aluno {
+                            char nome[250];
+                            int matricula;
+                            int ano_ingresso;
+                            char curso[100];
+                        };
+
+    Declaração de tipos em C
+        -> Uma estrutura ou outros tipos de dados podem ser definidos como um novo tipo,
+        utilizando typedef
+            EX:
+                typedef struct{
+                    char nome [250];
+                    int matricula;
+                    int ano_ingresso;
+                    char curso[100];
+                } aluno;
