@@ -1,0 +1,30 @@
+DEQUES(DOUBLE ENDED QUEUES)
+
+    -> São listas em que as operações de inserção e remoção podem ocorrer apenas nas extremidades
+    -> Fila duplamente terminada
+    -> Os operadores para deques são combinações dos operados vistos em pilhas e filas
+
+    - É importante notar que embora o deque possa assumir muitas das características
+    de pilhas e filas, não requer as ordens LIFO e FIFO que são aplicadas por essa
+    estrutura de dados
+    - Aplicações de Deque no mundo real:
+        -Filas com acesso prioritário onde a maioria das entidade segue a ordem padrão lógica de uma fila,
+        porém existem casos prioritários que serão empurrados para a frente desta fila.
+
+       Pop                                         Pop
+    =====                                       =====
+    | • |  <----                         ---->  | • |
+    =====        \                     /        =====
+                =========================
+     Front <--- |   |   |   |   |   |   |   --> Back
+                =========================
+    =====         ↗                   ↖         =====
+    | • |  -----/                       \-----  | • |
+    =====                                       =====
+       Push                                        Push
+
+    Operações
+     - Inserir elemento no fim (back)
+     - Inserir elemento na frente (front)
+     - Remover elemento no fim (back)
+     - Remover elemento na frente (front)
